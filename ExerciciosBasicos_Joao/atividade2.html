@@ -1,0 +1,26 @@
+<!--Programa que ao clicar em um link, exibe um alerta com o texto do link,
+utilizando o método getElementByTagName-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <a href="#">Link 1</a> <br>
+    <a href="#">Link 2</a> <br>
+    <a href="#">Link 3</a>
+
+    <script>
+        const links = document.getElementsByTagName('a');
+
+        for (let i =  0; i < links.length; i++) {
+            links[i].addEventListener('click', function(event) {
+                event.preventDefault();
+                alert(this.textContent);
+            })
+        }
+    </script>
+</body>
+</html>

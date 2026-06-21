@@ -1,0 +1,24 @@
+<!--Programa que ao clicar no botão, altera o texto do parágrafo para "Olá, mundo!",
+utilizando o método querySelector.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <p id="paragrafo">Me chamo João</p>
+    <button id="botao">Clique aqui!</button>
+
+    <script>
+        const botao = document.querySelector('#botao');
+        const paragrafo = document.querySelector('#paragrafo');
+
+        botao.addEventListener('click', function(){
+            paragrafo.textContent = "Olá, mundo!"
+        })
+
+    </script>
+</body>
+</html>

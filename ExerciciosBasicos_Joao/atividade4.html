@@ -1,0 +1,30 @@
+<!--Programa que ao clicar no botão, altera o texto de todas as divs para "Item alterado",
+utilizando o método querySelectorAll-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+
+    <button id="botao">Clique aqui!</button>
+
+    <script>
+        const botao = document.getElementById('botao');
+        const itens = document.querySelectorAll('.item');
+
+        botao.addEventListener('click', function(){
+            itens.forEach(function(div){
+                div.textContent = "Item alterado!"
+            })
+            
+        })
+
+    </script>
+</body>
+</html>
